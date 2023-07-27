@@ -1,17 +1,11 @@
 class Aluno
-  @nome
-  @idade
-
-  def mudar_nome(nome)
-    @nome = nome
-  end
-
-  def mostra_nome
-    @nome
-  end
+  attr_accessor :nome, :idade
 end
 
 a1 = Aluno.new
 
-a1.mudar_nome("Lucas")
-puts a1.mostra_nome
+a1.nome = "Diego"
+a1.idade = 35
+
+puts a1.nome
+puts a1.idade
