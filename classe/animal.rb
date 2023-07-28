@@ -1,12 +1,15 @@
+module Comunica
+  def comunicar
+    puts "Olá, eu sou a classe mãe ou super classe como você preferir"
+  end
+end
+
 class Animal
+  include Comunica
   attr_reader :nome
 
   def initialize(nome)
     @nome = nome
-  end
-
-  def comunicar
-    puts "Olá, eu sou a classe mãe ou super classe como você preferir"
   end
 end
 
@@ -19,7 +22,7 @@ class Cachorro < Animal
   end
 
   def comunicar
-    puts "Au, au, au!"
+    puts "Au, au! Classe Filha!"
   end
 end
 
@@ -32,7 +35,7 @@ class Gato < Animal
   end
 
   def comunicar
-    puts "Miau, miau"
+    puts "Miau, miau! Classe Filha!"
   end
 end
 
